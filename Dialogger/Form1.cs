@@ -15,5 +15,16 @@ namespace Dialogger
         {
             InitializeComponent();
         }
+
+        private void AboutClick(object sender, EventArgs e)
+        {
+            AboutBox1 aboutBox = new AboutBox1();
+            aboutBox.ShowDialog();
+        }
+
+        private void ExitClick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
