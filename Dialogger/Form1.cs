@@ -24,6 +24,7 @@ namespace Dialogger
         private void SpawnDialog(object sender, EventArgs e)
         {
             MessageBoxIcon messageBoxIcon = new MessageBoxIcon();
+            MessageBoxButtons messageBoxButtons = new MessageBoxButtons();
             if (comboBox1.SelectedItem == "Error")
             {
                 messageBoxIcon = MessageBoxIcon.Error;
@@ -40,8 +41,24 @@ namespace Dialogger
             {
                 messageBoxIcon = MessageBoxIcon.None;
             }
-                MessageBox.Show(this, textBox2.Text,
-                                       textBox1.Text, MessageBoxButtons.OK,
+            if (comboBox2.SelectedItem == "Yes, No")
+            {
+                messageBoxButtons = MessageBoxButtons.YesNo;
+            }
+            else if (comboBox2.SelectedItem == "Yes, No, Cancel")
+            {
+                messageBoxButtons = MessageBoxButtons.YesNoCancel;
+            }
+            else if (comboBox2.SelectedItem == "OK, Cancel")
+            {
+                messageBoxButtons = MessageBoxButtons.OKCancel;
+            }
+            else
+            {
+                messageBoxButtons = MessageBoxButtons.OK;
+            }
+            MessageBox.Show(this, textBox2.Text,
+                                       textBox1.Text, messageBoxButtons,
                                        messageBoxIcon,
                                        MessageBoxDefaultButton.Button1, 0);
         }

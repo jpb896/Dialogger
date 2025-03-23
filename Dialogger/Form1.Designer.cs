@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -37,12 +38,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.menuItem4 = new System.Windows.Forms.MenuItem();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -53,7 +55,6 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.button1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
             this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(800, 425);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -63,8 +64,23 @@
             this.toolStripContainer1.TabIndex = 1;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.Location = new System.Drawing.Point(0, 390);
+            this.button1.Margin = new System.Windows.Forms.Padding(16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(800, 35);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Spawn dialog";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.SpawnDialog);
+            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
@@ -73,6 +89,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.MaximumSize = new System.Drawing.Size(1920, 1200);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 425);
             this.panel1.TabIndex = 1;
@@ -86,25 +103,25 @@
             "Warning",
             "Error",
             "None (no icon)"});
-            this.comboBox1.Location = new System.Drawing.Point(654, 4);
+            this.comboBox1.Location = new System.Drawing.Point(603, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(194, 24);
             this.comboBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(653, 61);
-            this.textBox2.MaximumSize = new System.Drawing.Size(122, 1024);
+            this.textBox2.Location = new System.Drawing.Point(603, 60);
+            this.textBox2.MaximumSize = new System.Drawing.Size(256, 1024);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 105);
+            this.textBox2.Size = new System.Drawing.Size(194, 105);
             this.textBox2.TabIndex = 4;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(654, 33);
+            this.textBox1.Location = new System.Drawing.Point(603, 32);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 22);
+            this.textBox1.Size = new System.Drawing.Size(195, 22);
             this.textBox1.TabIndex = 3;
             // 
             // label3
@@ -133,16 +150,6 @@
             this.label1.Size = new System.Drawing.Size(76, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dialog type";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(319, 280);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Spawn dialog";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.SpawnDialog);
             // 
             // mainMenu1
             // 
@@ -175,6 +182,31 @@
             this.menuItem4.Index = 0;
             this.menuItem4.Text = "About Dialogger";
             this.menuItem4.Click += new System.EventHandler(this.AboutClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 172);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 16);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Action buttons type";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "OK",
+            "OK, Cancel",
+            "Yes, No",
+            "Yes, No, Cancel",
+            "Retry, Cancel",
+            "Abort, Retry, Ignore"});
+            this.comboBox2.Location = new System.Drawing.Point(603, 171);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(195, 24);
+            this.comboBox2.TabIndex = 7;
             // 
             // Form1
             // 
@@ -209,6 +241,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
