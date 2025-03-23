@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dialogger", "Dialogger\Dialogger.csproj", "{15578592-F128-4E37-A06F-1ADEF4C7853E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dialogger4.5", "Dialogger4.5\Dialogger4.5.csproj", "{DA0325A5-5B96-4CC3-B74D-58A40A58954C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{15578592-F128-4E37-A06F-1ADEF4C7853E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15578592-F128-4E37-A06F-1ADEF4C7853E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15578592-F128-4E37-A06F-1ADEF4C7853E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA0325A5-5B96-4CC3-B74D-58A40A58954C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA0325A5-5B96-4CC3-B74D-58A40A58954C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA0325A5-5B96-4CC3-B74D-58A40A58954C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA0325A5-5B96-4CC3-B74D-58A40A58954C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
